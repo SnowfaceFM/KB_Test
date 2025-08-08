@@ -1,0 +1,266 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Talent Bridge — Recruiting Agency</title>
+  <meta name="description" content="Bilingual recruiting site (DE/RU) for international tech talent relocation to Germany.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Talent Bridge Recruiting",
+    "url":"https://example.com",
+    "logo":"https://example.com/assets/logo.svg",
+    "sameAs":[],
+    "address":{"@type":"PostalAddress","addressLocality":"Koblenz","addressRegion":"Rheinland-Pfalz","addressCountry":"DE"}
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Logo">
+        <b>Talent Bridge Recruiting</b>
+        <span class="badge" data-i18n="tagline">DE/RU · Tech · Relocation</span>
+      </div>
+      <div class="langswitch">
+        <button id="btnDE" aria-pressed="true" aria-label="Deutsch">DE</button>
+        <button id="btnRU" aria-pressed="false" aria-label="Русский">RU</button>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1 data-i18n="h1">Wir соединяем работодателей Германии с талантами из мира IT</h1>
+        <p data-i18n="sub">Агентство полного цикла: подбор, релокация, онбординг. Легально. Прозрачно. Быстро.</p>
+        <div class="cta">
+          <a href="#for-employers" class="button" data-i18n="cta1">Для работодателей</a>
+          <a href="#for-candidates" class="button secondary" data-i18n="cta2">Для кандидатов</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="card1t">Ключевые преимущества</h3>
+        <ul class="list">
+          <li data-i18n="adv1">Фокус: Германия, Rheinland-Pfalz</li>
+          <li data-i18n="adv2">DE/RU/EN коммуникация</li>
+          <li data-i18n="adv3">GDPR &amp; трудовое право — по уставу</li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="for-employers" class="section">
+      <h2 data-i18n="empH">Работодателям</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 data-i18n="emp1">Поиск &amp; отбор</h3>
+          <p data-i18n="emp1d">Анализ требований, сорсинг, скрининг, технические интервью.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="emp2">Релокация</h3>
+          <p data-i18n="emp2d">Визы, Blue Card, Anmeldung, интеграция семьи.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="emp3">Документация</h3>
+          <p data-i18n="emp3d">Контракты, Datenschutz, Onboarding-пакеты.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3 data-i18n="empFormT">Запрос подбора</h3>
+        <form class="form" method="POST" action="https://formspree.io/f/your-id">
+          <label data-i18n="empRole">Должность</label>
+          <input name="role" required>
+          <label data-i18n="empSen">Уровень</label>
+          <select name="seniority">
+            <option>Junior</option><option>Mid</option><option>Senior</option><option>Lead</option>
+          </select>
+          <label data-i18n="empEmail">Контактный e‑mail</label>
+          <input type="email" name="email" required>
+          <label><input type="checkbox" required name="gdpr"> <span data-i18n="gdpr">Согласен(на) с обработкой персональных данных (GDPR)</span></label>
+          <button class="button" type="submit" data-i18n="send">Отправить</button>
+          <p class="notice" data-i18n="formNote">Замените action на свой Formspree/Backend URL.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="for-candidates" class="section">
+      <h2 data-i18n="candH">Кандидатам</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 data-i18n="cand1">Карьерный трек</h3>
+          <p data-i18n="cand1d">Резюме, портфолио, подготовка к интервью.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="cand2">Релокация в DE</h3>
+          <p data-i18n="cand2d">ВНЖ, жильё, интеграционные курсы.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="cand3">Менторство</h3>
+          <p data-i18n="cand3d">Первый год в компании — не один.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3 data-i18n="candFormT">Отправить резюме</h3>
+        <form class="form" method="POST" action="https://formspree.io/f/your-id">
+          <label data-i18n="candName">Имя и фамилия</label>
+          <input name="name" required>
+          <label data-i18n="candEmail">E‑mail</label>
+          <input type="email" name="email" required>
+          <label data-i18n="candRole">Целевая роль</label>
+          <input name="target">
+          <label data-i18n="candMsg">Сообщение</label>
+          <textarea name="message" rows="4"></textarea>
+          <label><input type="checkbox" required name="gdpr"> <span data-i18n="gdpr">Согласен(на) с обработкой персональных данных (GDPR)</span></label>
+          <button class="button" type="submit" data-i18n="send">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="legalH">Юридическая база</h2>
+      <div class="card">
+        <p data-i18n="legalP">Мы соблюдаем GDPR, Nachweisgesetz и Arbeitsrecht. Политика конфиденциальности и Impressum — ниже.</p>
+        <div class="cta">
+          <a class="button secondary" href="privacy.html" data-i18n="privacy">Политика конфиденциальности</a>
+          <a class="button secondary" href="imprint.html" data-i18n="imprint">Impressum</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Talent Bridge Recruiting</div>
+      <div>In der Hohlstadt 20–22, 56076 Koblenz · Tel. 0160 91447109</div>
+    </footer>
+  </div>
+
+  <div class="cookiebar" id="cookiebar" role="dialog" aria-live="polite">
+    <div class="row">
+      <div><b data-i18n="cookieT">Cookies</b> — <span data-i18n="cookieD">мы используем минимальные файлы cookie для аналитики</span>.</div>
+      <div class="cta">
+        <button class="button secondary" id="cookieDecline" data-i18n="decline">Отклонить</button>
+        <button class="button" id="cookieAccept" data-i18n="accept">Принять</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Language data
+  const dict = {
+    DE: {
+      tagline:"DE/RU · Tech · Relocation",
+      h1:"Wir verbinden Arbeitgeber in Deutschland mit internationalen IT‑Talenten",
+      sub:"Full‑Service‑Agentur: Recruiting, Relocation, Onboarding. Rechtssicher. Transparent. Schnell.",
+      cta1:"Für Arbeitgeber",
+      cta2:"Für Kandidaten",
+      card1t:"Schlüsselvorteile",
+      adv1:"Fokus: Deutschland, Rheinland-Pfalz",
+      adv2:"DE/RU/EN Kommunikation",
+      adv3:"GDPR & Arbeitsrecht — sauber umgesetzt",
+      empH:"Für Arbeitgeber",
+      emp1:"Suche & Auswahl",
+      emp1d:"Anforderungsanalyse, Sourcing, Screening, Tech‑Interviews.",
+      emp2:"Relocation",
+      emp2d:"Visa, Blue Card, Anmeldung, Familienintegration.",
+      emp3:"Dokumentation",
+      emp3d:"Verträge, Datenschutz, Onboarding‑Pakete.",
+      empFormT:"Anfrage zur Besetzung",
+      empRole:"Position",
+      empSen:"Level",
+      empEmail:"Kontakt‑E‑Mail",
+      gdpr:"Ich willige in die Verarbeitung meiner personenbezogenen Daten (GDPR) ein",
+      send:"Senden",
+      candH:"Für Kandidaten",
+      cand1:"Karrierepfad",
+      cand1d:"CV, Portfolio, Interview‑Vorbereitung.",
+      cand2:"Relocation nach DE",
+      cand2d:"AT, Wohnung, Integrationskurse.",
+      cand3:"Mentoring",
+      cand3d:"Im ersten Jahr im Unternehmen nicht allein.",
+      candFormT:"Lebenslauf senden",
+      candName:"Vor‑ und Nachname",
+      candEmail:"E‑Mail",
+      candRole:"Zielrolle",
+      candMsg:"Nachricht",
+      legalH:"Rechtsgrundlagen",
+      legalP:"Wir beachten GDPR, Nachweisgesetz und Arbeitsrecht. Datenschutzerklärung und Impressum unten.",
+      privacy:"Datenschutzerklärung",
+      imprint:"Impressum",
+      cookieT:"Cookies",
+      cookieD:"Wir verwenden minimale Cookies für die Analyse",
+      decline:"Ablehnen",
+      accept:"Akzeptieren"
+    },
+    RU: {
+      tagline:"DE/RU · Tech · Релокация",
+      h1:"Мы соединяем работодателей Германии с международными IT‑талантами",
+      sub:"Агентство полного цикла: подбор, релокация, онбординг. Законно. Прозрачно. Быстро.",
+      cta1:"Для работодателей",
+      cta2:"Для кандидатов",
+      card1t:"Ключевые преимущества",
+      adv1:"Фокус: Германия, Рейнланд‑Пфальц",
+      adv2:"DE/RU/EN коммуникация",
+      adv3:"GDPR и трудовое право — по правилам",
+      empH:"Работодателям",
+      emp1:"Поиск и отбор",
+      emp1d:"Анализ требований, сорсинг, скрининг, тех‑интервью.",
+      emp2:"Релокация",
+      emp2d:"Визы, Blue Card, Anmeldung, интеграция семьи.",
+      emp3:"Документация",
+      emp3d:"Контракты, Datenschutz, пакеты онбординга.",
+      empFormT:"Запрос подбора",
+      empRole:"Должность",
+      empSen:"Уровень",
+      empEmail:"Контактный e‑mail",
+      gdpr:"Согласен(на) с обработкой персональных данных (GDPR)",
+      send:"Отправить",
+      candH:"Кандидатам",
+      cand1:"Карьерный трек",
+      cand1d:"Резюме, портфолио, подготовка к интервью.",
+      cand2:"Релокация в Германию",
+      cand2d:"ВНЖ, жильё, интеграционные курсы.",
+      cand3:"Менторство",
+      cand3d:"Первый год в компании — не один.",
+      candFormT:"Отправить резюме",
+      candName:"Имя и фамилия",
+      candEmail:"E‑mail",
+      candRole:"Целевая роль",
+      candMsg:"Сообщение",
+      legalH:"Юридическая база",
+      legalP:"Мы соблюдаем GDPR, Nachweisgesetz и трудовое право. Политика конфиденциальности и Impressum — ниже.",
+      privacy:"Политика конфиденциальности",
+      imprint:"Impressum",
+      cookieT:"Cookies",
+      cookieD:"мы используем минимальные файлы cookie для аналитики",
+      decline:"Отклонить",
+      accept:"Принять"
+    }
+  };
+
+  let lang = localStorage.getItem("lang") || "RU";
+  const apply = () => {
+    const d = dict[lang];
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      if(d[key]) el.textContent = d[key];
+    });
+    document.getElementById("btnDE").setAttribute("aria-pressed", lang==="DE");
+    document.getElementById("btnRU").setAttribute("aria-pressed", lang==="RU");
+    document.documentElement.lang = lang==="DE" ? "de" : "ru";
+  };
+  document.getElementById("btnDE").onclick = ()=>{lang="DE";localStorage.setItem("lang",lang);apply();}
+  document.getElementById("btnRU").onclick = ()=>{lang="RU";localStorage.setItem("lang",lang);apply();}
+  document.getElementById("year").textContent = new Date().getFullYear();
+  apply();
+
+  // Cookie bar (minimal)
+  const bar = document.getElementById("cookiebar");
+  if(!localStorage.getItem("cookie-consent")) bar.classList.add("show");
+  document.getElementById("cookieAccept").onclick=()=>{localStorage.setItem("cookie-consent","yes");bar.classList.remove("show");};
+  document.getElementById("cookieDecline").onclick=()=>{localStorage.setItem("cookie-consent","no");bar.classList.remove("show");};
+
+  </script>
+</body>
+</html>
